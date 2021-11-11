@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextSystemReport" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SystemReportFormController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="691.0" onAction="#backToAdminSelectForm" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: #353b48;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="73.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.31428571428571433" startY="0.6904761904761905">
+               <stops>
+                  <Stop color="#6dcfb8" />
+                  <Stop color="#6dcfb8" offset="0.007662835249042145" />
+                  <Stop color="#3c4e61" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="474.0" layoutY="21.0" prefHeight="51.0" prefWidth="388.0" text=" Green Super Market" textFill="WHITE">
+         <font>
+            <Font name="Roboto Black" size="35.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.95">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1125.0" layoutY="24.0" onAction="#backToSupermarketForm" prefHeight="45.0" prefWidth="151.0" style="-fx-background-radius: 12; -fx-background-color: #e74c3c;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+         </padding>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="37.0" layoutY="716.0" size="17" text="" />
+      <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_CIRCLE_RIGHT" layoutX="1143.0" layoutY="54.0" size="20" />
+      <Label layoutX="1078.0" layoutY="97.0" prefHeight="30.0" prefWidth="78.0" text="Time  : ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1165.0" layoutY="97.0" prefHeight="30.0" prefWidth="125.0" text="00:00:00">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="89.0" layoutY="99.0" prefHeight="20.0" prefWidth="200.0" text="06  . Octomber. 2021">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="97.0" prefHeight="30.0" prefWidth="78.0" text="Date  :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="dailyReportContext" buttonType="RAISED" layoutX="420.0" layoutY="194.0" onAction="#dailyReportOnAction" prefHeight="59.0" prefWidth="484.0" style="-fx-background-color: #f39c12;" text="DAILY  REPORT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Black" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="monthlyReportContext" buttonType="RAISED" layoutX="420.0" layoutY="302.0" onAction="#monthlyReportOnAction" prefHeight="59.0" prefWidth="484.0" style="-fx-background-color: #2980b9;" text="MONTHLY  REPORT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Black" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="annuallyReportContext" buttonType="RAISED" layoutX="420.0" layoutY="402.0" onAction="#annuallyOnAction" prefHeight="59.0" prefWidth="484.0" style="-fx-background-color: #16a085;" text="ANNUALLY  REPORT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Black" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="dateFrom" layoutX="393.0" layoutY="535.0" promptText="FROM">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXDatePicker fx:id="dateTo" layoutX="765.0" layoutY="535.0" promptText="TO">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXButton fx:id="contextSearch" layoutX="581.0" layoutY="605.0" onAction="#searchOnAction" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #2980b9; -fx-background-radius: 25;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="222.0" layoutY="171.0" prefHeight="3.0" prefWidth="950.0" />
+      <Separator layoutX="228.0" layoutY="589.0" prefHeight="3.0" prefWidth="950.0" />
+   </children>
+</AnchorPane>

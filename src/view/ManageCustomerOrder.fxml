@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextManage" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #f8f6ee;" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerOrderController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="852.0" layoutY="530.0" onAction="#backOnAction" prefHeight="37.0" prefWidth="152.0" ripplerFill="#f50707" style="-fx-background-color: #e74c3c; -fx-background-radius: 6;" text="Cancel" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrder" layoutX="19.0" layoutY="120.0" onMouseClicked="#mouseEvent" prefHeight="308.0" prefWidth="1007.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="145.0" text="Item Code" />
+          <TableColumn fx:id="colOrderId" prefWidth="179.0" text="Order Id" />
+            <TableColumn fx:id="colQty" prefWidth="169.0" text="Qty" />
+            <TableColumn fx:id="colDiscount" prefWidth="161.0" text="Discount" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="175.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="175.0" text="Total" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtItemCode" labelFloat="true" layoutX="123.0" layoutY="453.0" prefHeight="25.0" prefWidth="167.0" promptText="Item Code">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtOrderId" labelFloat="true" layoutX="363.0" layoutY="453.0" prefHeight="25.0" prefWidth="167.0" promptText="Order Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="597.0" layoutY="453.0" prefHeight="25.0" prefWidth="167.0" promptText="Qty">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDiscount" labelFloat="true" layoutX="123.0" layoutY="516.0" prefHeight="25.0" prefWidth="167.0" promptText="Discount">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton layoutX="852.0" layoutY="451.0" onAction="#updateOnAction" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: #00b894; -fx-background-radius: 6;" text="Returned" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="90.0" layoutY="78.0" prefHeight="37.0" prefWidth="850.0" />
+      <Separator layoutX="819.0" layoutY="440.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="12.0" />
+      <JFXComboBox fx:id="cmbOrderId" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="28.0" prefHeight="25.0" prefWidth="129.0" promptText="Order Id" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="363.0" layoutY="513.0" prefHeight="25.0" prefWidth="167.0" promptText="Unit Price">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTotal" labelFloat="true" layoutX="601.0" layoutY="511.0" prefHeight="25.0" prefWidth="167.0" promptText="Total">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnQty" focusColor="#222222" labelFloat="true" layoutX="123.0" layoutY="567.0" onKeyReleased="#keyReleasedOnAction" prefHeight="25.0" prefWidth="167.0" promptText="Return Qty" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
